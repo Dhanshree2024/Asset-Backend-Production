@@ -1,0 +1,36 @@
+export declare class OrganizationRequestDto {
+    organization_profile_id: number;
+    organization_name?: string;
+    industry_type_name?: string;
+    gst_no?: string;
+    pan_number?: string;
+    mobile_number?: string;
+    org_alt_contact_number?: string;
+    email?: string;
+    website_url?: string;
+    financial_year?: string;
+    esi_number?: string;
+    pf_number?: string;
+    lin_number?: string;
+    tan_number?: string;
+    base_currency?: string;
+    dateformat?: string;
+    time_zone?: string;
+    landmark?: string;
+    street?: string;
+    city?: string;
+    pincode?: number | null;
+    state?: string;
+    alternative_contact?: string;
+    established_date?: Date;
+    users_designation?: number;
+    user_id: number;
+    users_first_name?: string;
+    users_middle_name?: string;
+    users_last_name?: string;
+    users_business_email?: string;
+    users_phone_number?: string;
+    billing_contact_name: string;
+    billing_email: string;
+    billing_phone_number: string;
+}

@@ -1,0 +1,81 @@
+import { Request, Response } from 'express';
+import { ConfigRepository } from 'src/config/config.repository';
+import { RegisterUserLogin } from '../organization_register/entities/register-user-login.entity';
+import { VerifyOtpDto } from '../organization_register/verify-otp.dto';
+import { UserRepository } from '../user/user.repository';
+import { LoginDto } from './dto/login.dto';
+import { AssetItemsService } from 'src/assets-data/asset-items/asset-items.service';
+import { MailService } from 'src/common/mail/mail.service';
+import { NotificationHelper } from 'src/common/notifications/notifications.helper';
+import { RedisService } from 'src/common/redis/redis.service';
+import { OrganizationalProfile } from 'src/organizational-profile/entity/organizational-profile.entity';
+import { User } from 'src/organizational-profile/entity/organizational-user.entity';
+import { CasbinRule } from 'src/organizational-profile/entity/policy-builder/casbin-rule.entity';
+import { OrganizationService } from 'src/organizational-profile/organizational-profile.service';
+import { PolicyBuilderService } from 'src/organizational-profile/policy-builder.service';
+import { Session } from 'src/organizational-profile/public_schema_entity/sessions.entity';
+import { Repository } from 'typeorm';
+import { MailConfigService } from '../common/mail/mail-config.service';
+import { TokenService } from './token.service';
+export declare class AuthService {
+    private readonly tokenService;
+    private readonly redisService;
+    private readonly mailConfigService;
+    private readonly mailService;
+    private readonly orgProfileService;
+    private readonly assetItemsService;
+    private readonly notificationHelper;
+    private userRepository;
+    private readonly configRepository;
+    private readonly sessionRepository;
+    private readonly registerserRepository;
+    private readonly organizationalProfileRepo;
+    private readonly userRepo;
+    private casbinRuleRepo;
+    private readonly policyBuilderService;
+    constructor(tokenService: TokenService, redisService: RedisService, mailConfigService: MailConfigService, mailService: MailService, orgProfileService: OrganizationService, assetItemsService: AssetItemsService, notificationHelper: NotificationHelper, userRepository: UserRepository, configRepository: ConfigRepository, sessionRepository: Repository<Session>, registerserRepository: Repository<RegisterUserLogin>, organizationalProfileRepo: Repository<OrganizationalProfile>, userRepo: Repository<User>, casbinRuleRepo: Repository<CasbinRule>, policyBuilderService: PolicyBuilderService);
+    validateUser(loginDto: LoginDto, response: Response, req: Request): Promise<{
+        success: boolean;
+        message: string;
+        data?: any;
+        status: number;
+    }>;
+    private setAuthCookies;
+    clearAuthCookies(response: Response): void;
+    private readTokenExpiryMs;
+    getSessionContext(req: Request, response?: Response): Promise<any>;
+    logout(req: Request, res: Response): Promise<{
+        message: string;
+    }>;
+    logoutAllSessions(userId: number, res: Response): Promise<{
+        message: string;
+    }>;
+    forceLogoutByUserId(localUserId: number): Promise<{
+        status: string;
+        message: string;
+    }>;
+    fetchUserLoginProfile(login_user_id: number): Promise<RegisterUserLogin>;
+    fetchUserLoginProfile2(login_user_id: number): Promise<unknown>;
+    getApiKey(): Promise<string | null>;
+    updatePassword(user_id: number, newPassword: string, response: Response, currentPassword?: string, req?: Request): Promise<{
+        jwt_token: string;
+        message?: string;
+        status?: number;
+        user_id?: number;
+        passwordSet?: boolean;
+        jwt_refresh_token?: string;
+        organization_schema_name?: string;
+        organization_id?: number;
+        permissions: any;
+        permissionToken: any;
+        profile_image: string;
+        role_id: number;
+        main_user_id: number;
+        is_compulsary: boolean;
+        session_id?: string;
+    }>;
+    validatePasswordResetLink(userId: number): Promise<boolean>;
+    sendOtpForPasswordReset(email: string): Promise<any>;
+    verifyForgotPasswordOtp(verifyOtpDto: VerifyOtpDto, res: Response): Promise<any>;
+    private setSchema;
+}

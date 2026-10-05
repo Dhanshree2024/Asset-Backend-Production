@@ -1,0 +1,38 @@
+export declare class AssetDepreciationViewEntity {
+    asset_stocks_unique_id: number;
+    system_code: string;
+    asset_id: number;
+    asset_title: string;
+    asset_item_id: number;
+    asset_item_name: string;
+    main_category_name: string;
+    sub_category_name: string;
+    block_id_company: number | null;
+    block_id_it: number | null;
+    block_name_company: string | null;
+    block_name_it: string | null;
+    buy_price: number;
+    depreciation_start_date: string;
+    company_depreciation_rate: number;
+    it_act_depreciation_rate: number;
+    company_act_residual_value: number;
+    it_act_residual_value: number;
+    it_act_asset_life: number;
+    company_act_asset_life: number;
+    asset_type: number;
+    is_half_year_it: boolean;
+    company_y1_fraction: number;
+    fy_label: string;
+    year_number: number;
+    it_opening_wdv: number;
+    it_depreciation: number;
+    it_closing_wdv: number;
+    company_opening_wdv: number;
+    company_depreciation: number;
+    company_closing_wdv: number;
+    location_id: number;
+    location_mapping_id: number;
+    location_name: number;
+    it_active: boolean;
+    company_active: boolean;
+}

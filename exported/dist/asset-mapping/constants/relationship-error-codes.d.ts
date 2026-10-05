@@ -1,0 +1,37 @@
+export declare const RELATIONSHIP_ERROR_CODES: {
+    readonly PARENT_LINK_ACTIVE: "ERR_PARENT_LINK_ACTIVE";
+    readonly CUSTODY_INHERITED: "ERR_CUSTODY_INHERITED";
+    readonly INVALID_TARGET_FOR_METRIC: "ERR_INVALID_TARGET_FOR_METRIC";
+    readonly LOCATION_INHERITED: "ERR_LOCATION_INHERITED";
+    readonly LICENSE_SEATS_EXHAUSTED: "ERR_LICENSE_SEATS_EXHAUSTED";
+    readonly ENDPOINT_INACTIVE: "ERR_ENDPOINT_INACTIVE";
+    readonly LICENSE_SCOPE_MISMATCH: "ERR_LICENSE_SCOPE_MISMATCH";
+    readonly LICENSE_ALREADY_ASSIGNED: "ERR_LICENSE_ALREADY_ASSIGNED";
+    readonly ALREADY_CONNECTED: "ERR_ALREADY_CONNECTED";
+    readonly ACTIVE_HOSTED_INSTANCES: "ERR_ACTIVE_HOSTED_INSTANCES";
+    readonly CUSTODY_CONFLICT: "ERR_CUSTODY_CONFLICT";
+    readonly UNRESOLVED_DEPENDENTS: "ERR_UNRESOLVED_DEPENDENTS";
+    readonly ACTION_NOT_ALLOWED_FOR_OFFBOARDING: "ERR_ACTION_NOT_ALLOWED_FOR_OFFBOARDING";
+    readonly CHILD_LINKED_TRANSFER: "ERR_CHILD_LINKED_TRANSFER";
+    readonly PARENT_UNAVAILABLE: "ERR_PARENT_UNAVAILABLE";
+    readonly MISSING_REQUIRED_FIELDS: "ERR_MISSING_REQUIRED_FIELDS";
+};
+export type RelationshipErrorCode = typeof RELATIONSHIP_ERROR_CODES[keyof typeof RELATIONSHIP_ERROR_CODES];
+export declare const RELATIONSHIP_ERROR_MESSAGES: {
+    ERR_PARENT_LINK_ACTIVE: (softwareName: string, hostSystemCode?: string | null, hostName?: string | null) => string;
+    ERR_CUSTODY_INHERITED: (softwareName: string, hostSystemCode?: string | null, hostName?: string | null, userOrBranchInfo?: string | null) => string;
+    ERR_INVALID_TARGET_FOR_METRIC: (softwareName: string, metric: string, targetType: string) => string;
+    ERR_LOCATION_INHERITED: (assetName: string, hostSystemCode?: string | null, hostName?: string | null, isVm?: boolean) => string;
+    ERR_LICENSE_SEATS_EXHAUSTED: (softwareName: string, totalSeats: number) => string;
+    ERR_ENDPOINT_INACTIVE: (hostSystemCode?: string | null, hostName?: string | null) => string;
+    ERR_LICENSE_SCOPE_MISMATCH: (softwareName: string, licensedBranchName: string, hostDeviceName: string, hostBranchName: string) => string;
+    ERR_LICENSE_ALREADY_ASSIGNED: (softwareName: string, systemCode?: string | null, targetType?: string | null, assignedToName?: string | null) => string;
+    ERR_ALREADY_CONNECTED: (guestName: string, hostName: string, hostCode?: string | null, isPeripheral?: boolean) => string;
+    ERR_ACTIVE_HOSTED_INSTANCES: (hostName: string, hostCode: string | null, guestCount: number, guestCodesText?: string) => string;
+    ERR_CUSTODY_CONFLICT: (peripheralName: string, custodianName: string, hostCustodianName?: string | null) => string;
+    ERR_UNRESOLVED_DEPENDENTS: (hostName: string, dependentsCount: number) => string;
+    ERR_ACTION_NOT_ALLOWED_FOR_OFFBOARDING: (peripheralName: string) => string;
+    ERR_CHILD_LINKED_TRANSFER: (peripheralName: string, hostName?: string | null, hostCode?: string | null) => string;
+    ERR_PARENT_UNAVAILABLE: (assetName: string, causeAssetName: string, reason?: string) => string;
+    ERR_MISSING_REQUIRED_FIELDS: (field: string, context?: string) => string;
+};

@@ -1,0 +1,30 @@
+import { User } from './organizational-user.entity';
+export declare class OrganizationVendors {
+    vendor_id: number;
+    vendor_name: string;
+    vendor_gst_no: string;
+    vendor_gst_status: string;
+    vendor_code: string;
+    vendor_street: string;
+    vendor_landmark: string;
+    vendor_city: string;
+    vendor_state: string;
+    vendor_country: string;
+    vendor_pincode: string;
+    vendor_contact_number: string;
+    vendor_alternative_contact_number: string;
+    vendor_email: string;
+    vendor_primary_contact: string;
+    vendor_first_name: string;
+    vendor_middle_name: string;
+    vendor_last_name: string;
+    vendor_degination: string;
+    vendor_department: string;
+    vendor_display_name: string;
+    is_active: number;
+    is_deleted: number;
+    created_by: number;
+    added_by_user: User;
+    created_at: Date;
+    updated_at: Date;
+}

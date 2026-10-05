@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountTypesEnum = void 0;
+var AccountTypesEnum;
+(function (AccountTypesEnum) {
+    AccountTypesEnum["User"] = "User";
+    AccountTypesEnum["AssetMaintenance"] = "AssetMaintenance";
+    AccountTypesEnum["AssetAssignment"] = "AssetAssignment";
+    AccountTypesEnum["AssetScrap"] = "AssetScrap";
+    AccountTypesEnum["RoleCreation"] = "RoleCreation";
+    AccountTypesEnum["StockTransfer"] = "StockTransfer";
+    AccountTypesEnum["SubscriptionExpiry"] = "SubscriptionExpiry";
+    AccountTypesEnum["BranchCreation"] = "BranchCreation";
+    AccountTypesEnum["LocationCreation"] = "LocationCreation";
+    AccountTypesEnum["CostCenterCreation"] = "CostCenterCreation";
+    AccountTypesEnum["ProjectCreation"] = "ProjectCreation";
+    AccountTypesEnum["DepartmentCreation"] = "DepartmentCreation";
+    AccountTypesEnum["AssetStockSerialCreation"] = "AssetStockSerialCreation";
+    AccountTypesEnum["VendorCreation"] = "VendorCreation";
+    AccountTypesEnum["SupportTicketsCreation"] = "SupportTicketsCreation";
+    AccountTypesEnum["Policy"] = "Policy";
+})(AccountTypesEnum || (exports.AccountTypesEnum = AccountTypesEnum = {}));

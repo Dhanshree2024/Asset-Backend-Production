@@ -1,0 +1,30 @@
+import { AssetType, ItemType, LicenseMetric, WarrantyType } from '../entities/asset-item.enums';
+export declare class UpdateAssetItemDto {
+    asset_item_id: number;
+    asset_item_name: string;
+    asset_item_description?: string;
+    main_category_id: number;
+    sub_category_id: number;
+    asset_item_icon: string;
+    item_type: ItemType;
+    license_metric?: LicenseMetric;
+    asset_type: AssetType;
+    asset_block: number;
+    asset_block_it: number;
+    warranty_type: WarrantyType;
+    is_licensable: Boolean;
+    added_by: number;
+    custom_fields: [];
+    has_depreciation: Boolean;
+    import_barcode: Boolean;
+    has_serials: Boolean;
+    has_warranty: Boolean;
+    upload_documents: Boolean;
+    company_act_asset_life: number;
+    it_act_asset_life: number;
+    company_depreciation_rate: number;
+    it_act_depreciation_rate: number;
+    company_act_residual_value: number;
+    it_act_residual_value: number;
+    preffered_method: number;
+}

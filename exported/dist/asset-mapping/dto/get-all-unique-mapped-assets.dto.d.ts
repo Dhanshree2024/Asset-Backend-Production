@@ -1,0 +1,35 @@
+export declare class GetAllUniqueMappedAssetsDto {
+    mapping_type: number;
+    asset_id: number;
+    asset_used_by: string;
+    asset_managed_by: string;
+    branch_id: number;
+    status_type_id: number;
+    description: string;
+    department_id: number;
+    reallocation_mapping_id: number | null;
+    created_by: string;
+    updated_by: string;
+    created_at: Date;
+    updated_at: Date;
+    is_active: boolean;
+    is_deleted: boolean;
+    quantity: number;
+    asset_item_name: string;
+    asset_item_description: string;
+    sub_category_id: number;
+    main_category_id: number;
+    parent_organization_id: number;
+    added_by: string;
+    previous_available_quantity: number;
+    total_available_quantity: number;
+    vendor_id: number;
+    stock_status: string;
+    warranty_start: Date;
+    warranty_end: Date;
+    asset_ownership_status: string;
+    asset_stock_serials_id: number;
+    asset_stock_serials: string;
+    asset_stock_serials_status: string;
+    stock_id: number;
+}

@@ -1,0 +1,37 @@
+import { AssetMappingRepository } from 'src/asset-mapping/entities/asset-mapping.entity';
+import { AssetDatum } from 'src/assets-data/asset-data/entities/asset-datum.entity';
+import { AssetsStatus } from 'src/assets-data/assets-status/entities/assets-status.entity';
+import { AssetWorkingStatus } from 'src/assets-data/asset-working-status/entities/asset-working-status.entity';
+import { AssetStockSerials } from 'src/assets-data/stocks/entities/asset_stock_serials.entity';
+export declare class AssetMaintenance {
+    maintenance_id: number;
+    maintenance_ref_id: string;
+    mapping_id: number;
+    asset_stocks_unique_id: number;
+    asset_serial: AssetStockSerials;
+    asset_mapping: AssetMappingRepository;
+    asset_id: number;
+    asset_info: AssetDatum;
+    asset_display_name: string;
+    serial_number?: string;
+    maintenance_type: string;
+    priority: string;
+    status_type_id: number;
+    status_info: AssetsStatus;
+    asset_working_condition_id?: number;
+    working_status_info?: AssetWorkingStatus;
+    scheduled_date: Date;
+    started_at?: Date;
+    completed_at?: Date;
+    managed_by: string;
+    estimated_cost?: number;
+    actual_cost?: number;
+    description?: string;
+    location?: string;
+    created_by?: number;
+    updated_by?: number;
+    created_at: Date;
+    updated_at: Date;
+    is_active: number;
+    is_deleted: number;
+}

@@ -1,0 +1,33 @@
+export declare class CreateAssetIdSettingsDto {
+    format: 'ONLY_NUMERIC' | 'PREFIX_ALLOWED' | 'SUFFIX_ALLOWED' | 'PREFIX_SUFFIX_ALLOWED';
+    scope: 'Global' | 'Branch' | 'Department';
+    prefix?: string;
+    suffix?: string;
+    date_format?: 'DDMMYY' | 'YYYYMMDD' | 'YYMM' | 'YYYY' | 'YY' | 'None';
+    separator: '-' | '_' | '.' | '';
+    min_length: number;
+    max_length: number;
+    start_from: number;
+    next_number: number;
+    sequence_length: number;
+    reset_sequence: 'never' | 'yearly' | 'monthly';
+    word_case: 'upper' | 'lower' | 'mixed';
+    include_date: boolean;
+    include_branch: boolean;
+    include_department: boolean;
+    include_category: boolean;
+    include_sub_category: boolean;
+    include_item: boolean;
+    enable_user_input: boolean;
+    branch_source?: 'CODE' | 'NAME';
+    branch_length?: number;
+    department_source?: 'CODE' | 'NAME';
+    department_length?: number;
+    category_source?: 'CODE' | 'NAME';
+    category_length?: number;
+    sub_category_source?: 'CODE' | 'NAME';
+    sub_category_length?: number;
+    item_source?: 'CODE' | 'NAME';
+    item_length?: number;
+    applied_template_id?: number;
+}

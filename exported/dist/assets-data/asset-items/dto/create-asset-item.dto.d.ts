@@ -1,0 +1,34 @@
+import { AssetCategory } from 'src/assets-data/asset-categories/entities/asset-category.entity';
+import { AssetSubcategory } from 'src/assets-data/asset-subcategories/entities/asset-subcategory.entity';
+import { AssetType, ItemType, LicenseMetric, WarrantyType } from '../entities/asset-item.enums';
+export declare class CreateAssetItemNewDto {
+    asset_item_name: string;
+    asset_item_description?: string;
+    asset_item_icon?: string;
+    sub_category_id: number;
+    main_category_id: number;
+    item_type: ItemType;
+    asset_type?: AssetType;
+    asset_block?: number;
+    asset_block_it?: number;
+    warranty_type?: WarrantyType[];
+    is_licensable: boolean;
+    license_metric?: LicenseMetric;
+    has_depreciation: boolean;
+    upload_documents?: boolean;
+    import_barcode?: boolean;
+    has_serials?: boolean;
+    has_warranty?: boolean;
+    company_act_asset_life?: number;
+    it_act_asset_life?: number;
+    company_depreciation_rate?: number;
+    it_act_depreciation_rate?: number;
+    company_act_residual_value?: number;
+    it_act_residual_value?: number;
+    preffered_method?: number;
+    parent_organization_id?: string;
+    added_by: number;
+    custom_fields?: any[];
+    category: AssetCategory;
+    subCategory: AssetSubcategory;
+}

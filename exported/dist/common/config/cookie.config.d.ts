@@ -1,0 +1,13 @@
+import type { CookieOptions } from 'express';
+export type SameSiteOption = 'lax' | 'strict' | 'none';
+export declare const AUTH_COOKIE_NAMES: readonly ["jwtToken", "jwt_refresh_token", "session_id", "system_user_id", "main_user_id", "organization_id", "x-organization-schema", "role_id", "permissions", "permissionToken", "branch_access", "profile_image"];
+export type AuthCookieName = (typeof AUTH_COOKIE_NAMES)[number];
+export declare const DEFAULT_REMEMBER_ME_MAX_AGE_MS: number;
+export declare const getCookieSameSite: () => SameSiteOption;
+export declare const getCookieSecure: () => boolean;
+export declare const getCookieDomain: () => string | undefined;
+export declare const getCookiePath: () => string;
+export declare const getRememberMeMaxAgeMs: () => number;
+export declare const authCookieOptions: (overrides?: Partial<CookieOptions>) => CookieOptions;
+export declare const clearCookieOptions: (overrides?: Partial<CookieOptions>) => CookieOptions;
+export declare const legacyClearCookieOptionVariants: () => CookieOptions[];

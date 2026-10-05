@@ -1,0 +1,32 @@
+import { AssetStockSerials } from './asset_stock_serials.entity';
+import { AssetDatum } from 'src/assets-data/asset-data/entities/asset-datum.entity';
+import { AssetItem } from 'src/assets-data/asset-items/entities/asset-item.entity';
+import { Stock } from './stocks.entity';
+import { OrganizationVendors } from 'src/organizational-profile/entity/organizational-vendors.entity';
+import { AssetProcurement } from './asset_procurements.entity';
+import { WarrantyType } from 'src/assets-data/asset-items/entities/asset-item.enums';
+export declare class AssetWarrantyDetailsRepository {
+    asset_stocks_unique_id: number;
+    asset_id?: number;
+    stock_id?: number;
+    asset_item_id?: number;
+    procurement_id?: number;
+    warranty_category?: WarrantyType[];
+    warranty_in_year?: number;
+    warranty_duration_type?: string;
+    warranty_start_date?: Date;
+    warranty_end_date?: Date;
+    support_type?: string;
+    support_contract?: string;
+    contract_number?: string;
+    amc_vendor?: number;
+    amc_frequency?: string;
+    last_service_date?: Date;
+    next_service_due_date?: Date;
+    asset_stock_serial?: AssetStockSerials;
+    asset_data?: AssetDatum;
+    stock?: Stock;
+    asset_item?: AssetItem;
+    amcVendor?: OrganizationVendors;
+    procurement?: AssetProcurement;
+}

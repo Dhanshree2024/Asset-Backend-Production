@@ -1,0 +1,35 @@
+import { Branch } from './branches.entity';
+import { Stock } from 'src/assets-data/stocks/entities/stocks.entity';
+import { LocationBranchMapping } from './location-branch-mapping.entity';
+export declare class Locations {
+    location_id: number;
+    location_name?: string;
+    branch_id?: number;
+    location_floor?: string;
+    location_room?: string;
+    location_code?: string;
+    location_city?: string;
+    location_state?: string;
+    country?: string;
+    pincode?: number;
+    location_landmark?: string;
+    location_street_address?: string;
+    location_description?: string;
+    location_google_map_pin?: string;
+    parent_location_id?: number;
+    location_level?: number;
+    is_locked: boolean;
+    is_active: number;
+    location_type_code: string;
+    location_type_id?: number;
+    location_type_entity_id: number;
+    path: string;
+    is_deleted: number;
+    created_at: Date;
+    updated_at: Date;
+    created_by?: number;
+    updated_by?: number;
+    branch?: Branch;
+    stocks: Stock[];
+    branch_mappings: LocationBranchMapping[];
+}

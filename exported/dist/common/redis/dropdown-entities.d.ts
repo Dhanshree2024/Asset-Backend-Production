@@ -1,0 +1,21 @@
+export declare const DROPDOWN: {
+    readonly CATEGORY: "category";
+    readonly SUBCATEGORY: "subcategory";
+    readonly ITEM: "item";
+    readonly STATUS: "status";
+    readonly OWNERSHIP_STATUS: "ownership_status";
+    readonly WORKING_STATUS: "working_status";
+    readonly LOCATION: "location";
+    readonly LOCATION_TYPE: "location_type";
+    readonly BRANCH: "branch";
+    readonly DEPARTMENT: "department";
+    readonly DESIGNATION: "designation";
+    readonly USER: "user";
+    readonly MANUFACTURER: "manufacturer";
+    readonly MODEL: "model";
+    readonly VENDOR: "vendor";
+    readonly PROJECT: "project";
+    readonly COST_CENTER: "cost_center";
+    readonly ROLE: "role";
+};
+export type DropdownEntity = (typeof DROPDOWN)[keyof typeof DROPDOWN];
